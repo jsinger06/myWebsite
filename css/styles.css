@@ -40,14 +40,10 @@ h1, h2 {
     max-width: 925px;
     width: 85%;
     margin: 0 auto;
-    padding: 60px 0;
+    padding: 30px 0;
 }
 h3 {
     margin: 0;
-}
-
-.item-details h3 + p {
-    font-style: italic;
 }
 
 .item-details h3 ~ p {
@@ -97,9 +93,9 @@ header {
     display: inline-block;
 }
 
-.projects .btn:hover {
+/*.projects .btn:hover {
     background: rgba(47, 48, 97, 80%);
-}
+}*/
 
 .project-item {
     overflow: hidden;
@@ -114,6 +110,17 @@ header {
     background: #A1C6D7;
 }
 
+.job-item .job-details h3 {
+    font-family: 'Caveat', cursive;
+    font-weight: 600;
+    font-size: 25px;
+}
+
+.job-company {
+    font-weight: bold;
+}
+
+
 /* Education
 --------------------------------------------------*/
 .education {
@@ -123,6 +130,10 @@ header {
 }
 .education p {
     width: 78%;
+}
+
+.education section {
+    padding: 10px;
 }
 
 /* Contact Info
