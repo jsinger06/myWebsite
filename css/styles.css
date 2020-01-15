@@ -32,7 +32,7 @@ h1 {
     line-height: 1;
 }
 h1, h2 {
-    font-family: 'Caveat', cursive;
+    font-family: 'Quintessential', cursive;
     font-weight: 400;
     margin: 0;
 }
@@ -111,7 +111,7 @@ header {
 }
 
 .job-item .job-details h3 {
-    font-family: 'Caveat', cursive;
+    font-family: 'Quintessential', cursive;
     font-weight: 600;
     font-size: 25px;
 }
