@@ -18,9 +18,9 @@ body {
 img {
     width: 300px;
 }
-a {
+a/* {
     color: #FFE66D;
-}
+}*/
 a:hover {
     text-decoration: none;
 }
@@ -32,7 +32,7 @@ h1 {
     line-height: 1;
 }
 h1, h2 {
-    font-family: 'Quintessential', cursive;
+    font-family: 'Yellowtail', cursive;
     font-weight: 400;
     margin: 0;
 }
@@ -44,6 +44,7 @@ h1, h2 {
 }
 h3 {
     margin: 0;
+	font-size: 25px;
 }
 
 .item-details h3 ~ p {
@@ -76,34 +77,12 @@ header {
     white-space: nowrap;
 }
 
-/* Projects
+/* Key Accomplishments
 --------------------------------------------------*/
-.projects {
-    background: #f7fff7;
-}
-.projects a {
-    color: darkblue;
- }
-.projects .btn {
-    color: #f7fff7;
-    background: #2F3061;
-    text-decoration: none;
-    padding: 8px;
-    border-radius: 4px;
-    display: inline-block;
+.key-accomp {
+	background: #f7fff7
 }
 
-/*.projects .btn:hover {
-    background: rgba(47, 48, 97, 80%);
-}*/
-
-.project-item {
-    overflow: hidden;
-}
-
-.project-item h3 {
-    margin-top: 0;
-}
 /* Work Experience
 --------------------------------------------------*/
 .work-experience {
@@ -111,22 +90,89 @@ header {
 }
 
 .job-item .job-details h3 {
-    font-family: 'Quintessential', cursive;
+    font-family: 'Yellowtail', cursive;
     font-weight: 600;
-    font-size: 25px;
 }
 
 .job-company {
     font-weight: bold;
 }
 
+/* Projects
+--------------------------------------------------*/
+.projects {
+    background: #a1cfa1;
+}
+
+.projects a {
+    color: darkblue;
+ }
+ 
+.projects .btn, .projects .project-link {
+	font-size: 15px;
+	padding: 8px 8px 0 8px;
+}
+
+.projects .btn {
+    color: #f7fff7;
+    background: #2F3061;
+    text-decoration: none;
+    border-radius: 4px;
+    display: inline-block;
+	margin: 0 15px;
+	
+}
+
+.projects .project-link {
+    display: inline-block;
+	margin: 0 5px;
+}
+
+.projects .btn:hover {
+    background: rgba(47, 48, 97, 80%);
+}
+
+.project-item {
+    overflow: hidden;
+}
+
+.project-item h3 {
+    display: flex;
+    margin-top: 0;
+}
+
+.project-item .tech-used {
+	font-size: 16px;
+}
+
+.project-item .planned {
+    font-weight: bold;
+    color: darkgoldenrod;
+}
+
+/* Learning
+--------------------------------------------------*/
+.learning-item .course-grid {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	list-style-type: none;
+	padding: 0;
+}
+
+.learning-item li {
+	font-weight: bold;
+	text-align: center;
+}
+.learning-item p {
+	font-weight: bold;
+}
 
 /* Education
 --------------------------------------------------*/
 .education {
     background-image: url("../images/joanna-kosinska-unsplash.jpg");
     background-size: cover;
-    background-position: top right;
+    background-position: 65% 25%;
 }
 .education p {
     width: 78%;
@@ -141,6 +187,10 @@ header {
 footer{
     background: #343434;
     color: #f7fff7;
+}
+
+footer a {
+    color: #FFE66D;
 }
 
 .contact-list {
@@ -188,13 +238,15 @@ footer{
 }
 
 @media screen and (max-width: 675px) {
-    .strength-grid {
+    .strength-grid, .course-grid {
         display: inline!important;
         white-space: nowrap;
     }
-}
+	.learning-item li {
+		text-align: left;
+	}
 
-@media screen and (max-width: 925px) {
+@media screen and (max-width: 975px) {
     .strength-grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
