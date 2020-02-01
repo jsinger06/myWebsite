@@ -72,15 +72,14 @@ const WorkExperienceItem = ( { workItem } ) => (
     );
 
 const WorkExperienceSection = () => (
-<section className="work-experience">
-    <div className="content-wrap item-details divider">
-        <h2>Work Experience</h2>
-        {/* Job 3 */}
-        { workExperienceList.map( (jobItem, key ) => (
-            <WorkExperienceItem workItem={ jobItem } key={key}/>
-        ))}
-    </div>
-</section>
+    <section className="work-experience">
+        <div className="content-wrap item-details divider">
+            <h2>Work Experience</h2>
+            { workExperienceList.map( (jobItem, key ) => (
+                <WorkExperienceItem workItem={ jobItem } key={key}/>
+            ))}
+        </div>
+    </section>
 );
 
 export default WorkExperienceSection;
