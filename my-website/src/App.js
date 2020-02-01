@@ -20,7 +20,7 @@ function App() {
     {/* ***********************  Key Accomplishments  *********************** */}
                 <AccomplishmentsSection />
     {/* ***********************  Technical Expertise  *********************** */}
-                <TechExpertiseSection />
+                {/*<TechExpertiseSection />*/}
     {/* ***********************  WORK EXPERIENCE  *********************** */}
                 <WorkExperienceSection />
     {/* ******************  EDUCATION & CERTIFICATIONS ****************** */}
