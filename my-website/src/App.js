@@ -3,6 +3,7 @@ import './App.css';
 import AccomplishmentsSection from "./pages/Resume/AccomplishmentsSection";
 import StrengthListSection from "./pages/Resume/StrengthSection";
 import WorkExperienceSection from "./pages/Resume/WorkExperienceSection";
+import TechExpertiseSection from "./pages/Resume/TechExpertiseSection";
 
 function App() {
     return (
@@ -18,6 +19,8 @@ function App() {
                 </header>
     {/* ***********************  Key Accomplishments  *********************** */}
                 <AccomplishmentsSection />
+    {/* ***********************  Technical Expertise  *********************** */}
+                <TechExpertiseSection />
     {/* ***********************  WORK EXPERIENCE  *********************** */}
                 <WorkExperienceSection />
     {/* ******************  EDUCATION & CERTIFICATIONS ****************** */}

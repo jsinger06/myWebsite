@@ -104,6 +104,27 @@ header {
 .project-item h3 {
   margin-top: 0;
 }
+/* Tech Expertise
+--------------------------------------------------*/
+.tech-expertise{
+  background: forestgreen;
+}
+
+.tech-grid{
+  display: grid;
+  grid-template-columns: .25fr 2fr;
+  column-gap: 20px;
+  border: #343434 solid 1px;
+}
+
+.tech {
+  text-align: center;
+  vertical-align: middle;
+  font-weight: bold;
+  margin: 0;
+  border-right: black dashed 1px;
+}
+
 /* Work Experience
 --------------------------------------------------*/
 .work-experience {
