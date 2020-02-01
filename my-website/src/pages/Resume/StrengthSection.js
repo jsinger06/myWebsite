@@ -13,11 +13,11 @@ const strengthList = [
 ];
 
 const StrengthListSection = () => (
-    <>
+    <div className="strength-grid">
         { strengthList.map( (strength, key) => (
             <p className="strength" key={key}>{strength}</p>
         ))}
-    </>
+    </div>
 );
 
 export default StrengthListSection;
