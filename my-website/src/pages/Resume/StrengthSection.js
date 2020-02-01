@@ -4,7 +4,7 @@ const strengthList = [
     'Focused on Customers',
     'Persuade Stakeholders',
     'Building Relationships',
-    'Translate Between Business &amp; Technical',
+    'Translate Between Business & Technical',
     'Train / Mentor Team Members',
     'Partner with Engineers',
     'Quick Learner',
