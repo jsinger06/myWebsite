@@ -107,21 +107,23 @@ header {
 /* Tech Expertise
 --------------------------------------------------*/
 .tech-expertise{
-  background: forestgreen;
+  background: beige;
 }
 
 .tech-grid{
   display: grid;
-  grid-template-columns: .25fr 2fr;
+  grid-template-columns: 1fr 4fr;
   column-gap: 20px;
   border: #343434 solid 1px;
 }
 
 .tech {
   text-align: center;
+  align-items: center;
   vertical-align: middle;
   font-weight: bold;
   margin: 0;
+  padding: 15px 0;
   border-right: black dashed 1px;
 }
 

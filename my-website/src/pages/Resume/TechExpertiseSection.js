@@ -9,7 +9,6 @@ const techExpertiseList = {
 };
 
 const TechExpertiseSection = () => {
-    /*todo: Finish CSS changes*/
     let capFirst = (word) => {
         return word.charAt(0).toUpperCase() + word.slice(1);
     };
