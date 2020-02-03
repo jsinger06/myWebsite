@@ -1,8 +1,8 @@
 import React from "react";
 
-const certificationsList = ['Pega PRPC CSSA (2016)', 'Pega PRPC CSA (2011)'];
+/*const certificationsList = ['Pega PRPC CSSA (2016)', 'Pega PRPC CSA (2011)'];*/
 
-const EducationCertificationsSection = () => (
+const EducationCertificationsSection = ({ certificationsList }) => (
     <section className="education">
         <div className="content-wrap item-details">
             <h2>Education &amp; Certifications</h2>

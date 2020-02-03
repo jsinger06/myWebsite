@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
 import AccomplishmentsSection from './pages/Resume/AccomplishmentsSection';
 import StrengthListSection from './pages/Resume/StrengthSection';
@@ -7,6 +7,19 @@ import TechExpertiseSection from './pages/Resume/TechExpertiseSection';
 import EducationCertificationsSection from './pages/Resume/EducationCertificationsSection';
 
 function App() {
+
+    const [body, setBody] = useState({ certificationsList: [] })
+
+    useEffect(() => {
+        const fetchResumeData = async() => {
+            const result = await fetch(`/api/resume`);
+            const body = await result.json();
+            setBody(body);
+        }
+
+        fetchResumeData();
+    }, []);
+
     return (
         <div>
             <main>
@@ -25,7 +38,7 @@ function App() {
     {/* ***********************  WORK EXPERIENCE  *********************** */}
                 <WorkExperienceSection />
     {/* ******************  EDUCATION & CERTIFICATIONS ****************** */}
-                <EducationCertificationsSection />
+                <EducationCertificationsSection certificationsList={ body.certificationsList }/>
     {/* *****************  CONTACT INFO / SOCIAL MEDIA  ***************** */}
                 <footer>
                     <div className="content-wrap">
