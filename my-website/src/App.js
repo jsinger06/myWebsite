@@ -1,9 +1,10 @@
 import React from 'react';
 import './App.css';
-import AccomplishmentsSection from "./pages/Resume/AccomplishmentsSection";
-import StrengthListSection from "./pages/Resume/StrengthSection";
-import WorkExperienceSection from "./pages/Resume/WorkExperienceSection";
-import TechExpertiseSection from "./pages/Resume/TechExpertiseSection";
+import AccomplishmentsSection from './pages/Resume/AccomplishmentsSection';
+import StrengthListSection from './pages/Resume/StrengthSection';
+import WorkExperienceSection from './pages/Resume/WorkExperienceSection';
+import TechExpertiseSection from './pages/Resume/TechExpertiseSection';
+import EducationCertificationsSection from './pages/Resume/EducationCertificationsSection';
 
 function App() {
     return (
@@ -24,23 +25,7 @@ function App() {
     {/* ***********************  WORK EXPERIENCE  *********************** */}
                 <WorkExperienceSection />
     {/* ******************  EDUCATION & CERTIFICATIONS ****************** */}
-                <section className="education">
-                        <div className="content-wrap item-details">
-                            <h2>Education &amp; Certifications</h2>
-                            <section>
-                                <h3>Certifications</h3>
-                                <p>Pega PRPC CSSA (2011)</p>
-                                <p>Pega PRPC CSA (2011)</p>
-                            </section>
-                            <section>
-                            <h3>DeVry University - Columbus, OH</h3>
-                            <p>Bachelor of Science in Computer Engineering Technology, (6/09)</p>
-                            <ul>
-                                <li>Dean's Scholarship</li>
-                            </ul>
-                            </section>
-                        </div>
-                </section>
+                <EducationCertificationsSection />
     {/* *****************  CONTACT INFO / SOCIAL MEDIA  ***************** */}
                 <footer>
                     <div className="content-wrap">
@@ -55,7 +40,7 @@ function App() {
                 </footer>
             </main>
         </div>
-  );
+    );
 }
 
 
