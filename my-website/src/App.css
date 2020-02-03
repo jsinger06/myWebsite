@@ -134,6 +134,11 @@ header {
   grid-template-columns: minmax(100px, 1fr) 4fr;
   column-gap: 20px;
   border: #343434 solid 1px;
+  margin-top: -1px;
+}
+
+.tech-grid:first-of-type {
+  border: #343434 solid 1px;
 }
 
 .tech {
