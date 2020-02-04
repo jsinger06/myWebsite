@@ -1,5 +1,5 @@
 import React from "react";
-
+/*
 const workExperienceList = [{
     company: 'ACS Group (Client: Verizon)',
     roles: [
@@ -47,7 +47,7 @@ const workExperienceList = [{
             ]
     }
 }];
-
+*/
 const WorkExperienceItem = ( { workItem } ) => (
         <section className="job-item">
         <div className="job-details">
@@ -71,7 +71,7 @@ const WorkExperienceItem = ( { workItem } ) => (
     </section>
     );
 
-const WorkExperienceSection = () => (
+const WorkExperienceSection = ( { workExperienceList = [] } ) => (
     <section className="work-experience">
         <div className="content-wrap item-details divider">
             <h2>Work Experience</h2>

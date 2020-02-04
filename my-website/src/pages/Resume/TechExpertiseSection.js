@@ -1,14 +1,14 @@
 import React from "react";
 
-const techExpertiseList = {
+/*const techExpertiseList = {
     languages: ['Javascript', 'SQL', 'HTML/XML', 'JSON', 'CSS', 'Java', 'C++'],
     frameworks: ['Node.js', 'Express', 'React', 'Pega PRPC (8.2,7.3,6.1,5.5)', 'Pega Mobile'],
     software: ['Git', 'Intellij', 'AWS Cloud9', 'Oracle SQL Developer', 'Postman', 'Splunk', 'Jenkins', 'JIRA', 'SVN'],
     servers: ['AWS', 'Tomcat', 'Websphere'],
     databases: ['Oracle', 'Mongo', 'Postgres', 'DB2']
-};
+};*/
 
-const TechExpertiseSection = () => {
+const TechExpertiseSection = ({ techExpertiseList = {} }) => {
     let capFirst = (word) => {
         return word.charAt(0).toUpperCase() + word.slice(1);
     };

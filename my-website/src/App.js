@@ -28,15 +28,15 @@ function App() {
                     <div className="content-wrap">
                         <h1>Joshua Singer</h1>
                         <h2>Senior Software Engineer</h2>
-                        <StrengthListSection />
+                        <StrengthListSection strengthList = { body.strengthList }/>
                     </div>
                 </header>
     {/* ***********************  Key Accomplishments  *********************** */}
-                <AccomplishmentsSection />
+                <AccomplishmentsSection accomplishmentsList={ body.accomplishmentsList }/>
     {/* ***********************  Technical Expertise  *********************** */}
-                <TechExpertiseSection />
+                <TechExpertiseSection techExpertiseList= { body.techExpertiseList }/>
     {/* ***********************  WORK EXPERIENCE  *********************** */}
-                <WorkExperienceSection />
+                <WorkExperienceSection workExperienceList = { body.workExperienceList }/>
     {/* ******************  EDUCATION & CERTIFICATIONS ****************** */}
                 <EducationCertificationsSection certificationsList={ body.certificationsList }/>
     {/* *****************  CONTACT INFO / SOCIAL MEDIA  ***************** */}

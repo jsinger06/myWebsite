@@ -1,6 +1,6 @@
 import React from "react";
 
-const strengthList = [
+/*const strengthList = [
     'Focused on Customers',
     'Persuade Stakeholders',
     'Building Relationships',
@@ -10,9 +10,9 @@ const strengthList = [
     'Quick Learner',
     'Drive Results',
     'Diagnose / Solve Complex Problems'
-];
+];*/
 
-const StrengthListSection = () => (
+const StrengthListSection = ( { strengthList = [] } ) => (
     <div className="strength-grid">
         { strengthList.map( (strength, key) => (
             <p className="strength" key={key}>{strength}</p>
