@@ -3,19 +3,8 @@ import resumeData from './data/resume';
 
 const app = express();
 
-app.get('/', (req, res) => {
-    console.log('received hello');
-    res.status(200).send("hello World!");
-});
-
-app.get('/test', (req, res) => {
-    console.log('received test');
-    res.status(200).send("test");
-});
-
 app.get('/api/resume', (req, res) => {
     console.log('received resume');
-    console.log(resumeData);
     res.status(200).json(resumeData);
 });
 
