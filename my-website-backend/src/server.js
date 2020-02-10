@@ -6,9 +6,9 @@ const app = express();
 
 app.use(express.static(path.join(__dirname, '/build')));
 
-app.get('/api/resume', (req, res) => {
+app.get('/api/resume', async (req, res) => {
     console.log('received resume');
-    res.status(200).json(resumeData);
+    res.status(200).json(await resumeData());
 });
 
 app.get('/resume', (req, res) => {

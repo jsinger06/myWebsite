@@ -1,3 +1,73 @@
+import mongodb from 'mongodb';
+const MongoClient = mongodb.MongoClient
+
+const collection = 'resume';
+
+const resumeData = async () => {
+    const client = await MongoClient.connect('mongodb://localhost:27017', {useNewUrlParser: true});
+    const db = client.db('myWebsite');
+    const data = await db.collection(collection).find().toArray();
+    // console.log(data);
+    const workExperienceObj = {
+        company: '',
+        roles:[{
+            title: '',
+            dates: ''
+        }],
+        jobDescription: {
+            description: '',
+            accomplishments:[]
+        },
+    };
+
+    const resultObj = {
+        accomplishmentsList:[],
+        strengthList:[],
+        certificationsList:[],
+        techExpertiseList:{languages:[],frameworks:[],software:[],servers:[],databases:[]},
+        workExperienceList:[workExperienceObj]
+    };
+
+    data.reduce( (acc, item) => {
+        if (item.category === 'tenure') {
+            workExperienceObj.company = item.company;
+            const title = item.jobRole;
+            const dates = item.value;
+            workExperienceObj.roles.push({title, dates});
+        }
+        return acc;
+    }, workExperienceObj);
+
+    data.reduce( (acc, item) => {
+
+        let section = null;
+
+        switch(item.category) {
+            case 'keyAccomplishment':
+                section = 'accomplishmentsList';
+                break;
+            case 'strengthList':
+                section = 'strengthList';
+                break;
+            case 'cert':
+                section ='certificationsList';
+                break;
+            case 'tech':
+                acc.techExpertiseList[item.subCategory].push(item.value);
+                break;
+        }
+
+        section !== null ? acc[section].push(item.value) : 'section not found';
+
+        return acc;
+    }, resultObj);
+
+    console.log(workExperienceObj);
+    return resultObj;
+}
+
+
+/*
 const resumeData = {
     certificationsList: ["Pega PRPC CSSA (2016)", "Pega PRPC CSA (2011)"],
     accomplishmentsList: [
@@ -73,5 +143,6 @@ const resumeData = {
         }
     }]
 }
+*/
 
 export default resumeData;
