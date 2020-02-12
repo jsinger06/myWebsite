@@ -45,5 +45,5 @@
 {company: 'JPMorgan Chase', jobRole: 'Application Developer Lead', category: 'tenure', subCategory: 'dates', value: 'May 2014 - July 2017'},
 {company: 'JPMorgan Chase', jobRole: 'Application Developer', category: 'tenure', subCategory: 'dates', value: 'January 2011 - May 2014'},
 {company: 'Cox Automotive', jobRole: 'Software Engineer', category: 'tenure', subCategory: 'dates', value: 'July 2017 - May 2019'},
-{company: 'Cox Automotive', jobRole: 'Software Engineer', category: 'tenure', subCategory: 'dates', value: 'May 2019 - Present'}
+{company: 'ACS Group (Client: Verizon)', jobRole: 'Software Engineer', category: 'tenure', subCategory: 'dates', value: 'May 2019 - Present'}
 
