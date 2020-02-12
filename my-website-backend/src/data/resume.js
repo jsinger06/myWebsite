@@ -3,46 +3,68 @@ const MongoClient = mongodb.MongoClient
 
 const collection = 'resume';
 
-const resumeData = async () => {
-    const client = await MongoClient.connect('mongodb://localhost:27017', {useNewUrlParser: true});
+const workExperienceFactory = (company) => ({
+    company: company,
+    roles: [],
+    jobDescription: {
+        description: '',
+        accomplishments: []
+    },
+});
+
+const resumeData = async() => {
+    const client = await MongoClient.connect('mongodb://localhost:27017', { useNewUrlParser: true, useUnifiedTopology: true });
     const db = client.db('myWebsite');
     const data = await db.collection(collection).find().toArray();
-    // console.log(data);
-    const workExperienceObj = {
-        company: '',
-        roles:[{
-            title: '',
-            dates: ''
-        }],
-        jobDescription: {
-            description: '',
-            accomplishments:[]
-        },
-    };
+
+
+    let companies = [];
+    let workExperience = {};
+
+    // Build Work experience section
+    data.forEach(item => {
+
+        let obj = {};
+        if (item.company != null && typeof item.company != 'undefined' && !companies.includes(item.company)) {
+            companies.push(item.company)
+            obj[item.company] = workExperienceFactory(item.company);
+        }
+        else {
+            obj[item.company] = workExperience[item.company]
+        }
+
+        if (item.category === 'tenure') {
+            obj[item.company].roles.push({ title: item.jobRole, dates: item.value });
+        }
+        else if (item.category === 'jobDescription') {
+            obj[item.company].jobDescription.description = item.value;
+        }
+        else if (item.category === 'accomplishment') {
+            obj[item.company].jobDescription.accomplishments.push(item.value)
+        }
+
+        if (Object.keys(obj) != 'undefined') {
+            workExperience[item.company] = obj[item.company]
+        }
+
+    });
+
+    console.log(workExperience);
 
     const resultObj = {
-        accomplishmentsList:[],
-        strengthList:[],
-        certificationsList:[],
-        techExpertiseList:{languages:[],frameworks:[],software:[],servers:[],databases:[]},
-        workExperienceList:[workExperienceObj]
+        accomplishmentsList: [],
+        strengthList: [],
+        certificationsList: [],
+        techExpertiseList: { languages: [], frameworks: [], software: [], servers: [], databases: [] },
+        workExperienceList: Object.values(workExperience)
     };
 
-    data.reduce( (acc, item) => {
-        if (item.category === 'tenure') {
-            workExperienceObj.company = item.company;
-            const title = item.jobRole;
-            const dates = item.value;
-            workExperienceObj.roles.push({title, dates});
-        }
-        return acc;
-    }, workExperienceObj);
-
-    data.reduce( (acc, item) => {
+    // Build remaining sections
+    data.reduce((acc, item) => {
 
         let section = null;
 
-        switch(item.category) {
+        switch (item.category) {
             case 'keyAccomplishment':
                 section = 'accomplishmentsList';
                 break;
@@ -50,7 +72,7 @@ const resumeData = async () => {
                 section = 'strengthList';
                 break;
             case 'cert':
-                section ='certificationsList';
+                section = 'certificationsList';
                 break;
             case 'tech':
                 acc.techExpertiseList[item.subCategory].push(item.value);
@@ -62,7 +84,6 @@ const resumeData = async () => {
         return acc;
     }, resultObj);
 
-    console.log(workExperienceObj);
     return resultObj;
 }
 
