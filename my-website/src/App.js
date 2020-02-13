@@ -8,14 +8,14 @@ import EducationCertificationsSection from './pages/Resume/EducationCertificatio
 
 function App() {
 
-    const [body, setBody] = useState({ certificationsList: [] })
+    const [body, setBody] = useState({ certificationsList: [] });
 
     useEffect(() => {
         const fetchResumeData = async() => {
             const result = await fetch(`/api/resume`);
             const body = await result.json();
             setBody(body);
-        }
+        };
 
         fetchResumeData();
     }, []);
