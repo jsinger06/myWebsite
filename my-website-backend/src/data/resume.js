@@ -1,5 +1,5 @@
 import mongodb from 'mongodb';
-const MongoClient = mongodb.MongoClient
+const MongoClient = mongodb.MongoClient;
 
 const collection = 'resume';
 
@@ -17,22 +17,22 @@ const resumeData = async() => {
     const db = client.db('myWebsite');
     const data = await db.collection(collection).find().toArray();
 
-
     let companies = [];
     let workExperience = {};
 
     // Build Work experience section
     data.forEach(item => {
-
+        // Create object containing all companies
         let obj = {};
         if (item.company != null && typeof item.company != 'undefined' && !companies.includes(item.company)) {
-            companies.push(item.company)
+            companies.push(item.company);
             obj[item.company] = workExperienceFactory(item.company);
         }
         else {
             obj[item.company] = workExperience[item.company]
         }
 
+        // Build out work experience object
         if (item.category === 'tenure') {
             obj[item.company].roles.push({ title: item.jobRole, dates: item.value });
         }
@@ -48,8 +48,6 @@ const resumeData = async() => {
         }
 
     });
-
-    console.log(workExperience);
 
     const resultObj = {
         accomplishmentsList: [],
@@ -68,7 +66,7 @@ const resumeData = async() => {
             case 'keyAccomplishment':
                 section = 'accomplishmentsList';
                 break;
-            case 'strengthList':
+            case 'strength':
                 section = 'strengthList';
                 break;
             case 'cert':
@@ -85,7 +83,7 @@ const resumeData = async() => {
     }, resultObj);
 
     return resultObj;
-}
+};
 
 
 /*
