@@ -45,9 +45,9 @@ function App() {
                         <h2>Let's Keep in Touch!</h2>
                         {/* Social media and contact links. */}
                         <ul className="contact-list">
-                            <li><a href="mailto:joshua.j.singer79@gmail.com">Email</a></li>
-                            - <li><a href="http://www.joshuajsinger-se.com/resume" target="_blank" rel="noopener noreferrer">Resume</a></li> -
                             <li><a href="https://www.linkedin.com/in/joshua-j-singer" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+                            <li><a href="mailto:joshua.j.singer79@gmail.com">Email</a></li>
+                            <li><a href="http://www.joshuajsinger-se.com/resume" target="_blank" rel="noopener noreferrer">Resume Web</a></li>
                         </ul>
                     </div>
                 </footer>
