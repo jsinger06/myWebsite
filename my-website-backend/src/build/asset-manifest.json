@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/static/css/main.9582a196.chunk.css",
-    "main.js": "/static/js/main.d84b642a.chunk.js",
-    "main.js.map": "/static/js/main.d84b642a.chunk.js.map",
+    "main.css": "/static/css/main.46694583.chunk.css",
+    "main.js": "/static/js/main.99b33ebc.chunk.js",
+    "main.js.map": "/static/js/main.99b33ebc.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.92e1f69d.js",
     "runtime-main.js.map": "/static/js/runtime-main.92e1f69d.js.map",
     "static/js/2.a7fcc100.chunk.js": "/static/js/2.a7fcc100.chunk.js",
     "static/js/2.a7fcc100.chunk.js.map": "/static/js/2.a7fcc100.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.204a81a8dcbd634eaa48a378ab80c24a.js": "/precache-manifest.204a81a8dcbd634eaa48a378ab80c24a.js",
+    "precache-manifest.c6597ffecc0a5e6b6169ed36ba5188d0.js": "/precache-manifest.c6597ffecc0a5e6b6169ed36ba5188d0.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/main.9582a196.chunk.css.map": "/static/css/main.9582a196.chunk.css.map",
+    "static/css/main.46694583.chunk.css.map": "/static/css/main.46694583.chunk.css.map",
     "static/js/2.a7fcc100.chunk.js.LICENSE.txt": "/static/js/2.a7fcc100.chunk.js.LICENSE.txt",
     "static/media/App.css": "/static/media/joanna-kosinska-unsplash.0d499d50.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.92e1f69d.js",
     "static/js/2.a7fcc100.chunk.js",
-    "static/css/main.9582a196.chunk.css",
-    "static/js/main.d84b642a.chunk.js"
+    "static/css/main.46694583.chunk.css",
+    "static/js/main.99b33ebc.chunk.js"
   ]
 }

@@ -235,9 +235,15 @@ footer {
     margin-bottom: 20px;
   }
 
+  header h2,
+  .tech-expertise h2 {
+    margin-bottom: 15px;
+  }
+
   h2 {
     line-height: 1;
   }
+
 }
 
 @media screen and (max-width: 675px) {
