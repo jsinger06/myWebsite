@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import './resumePage.css';
 import AccomplishmentsSection from './Sections/AccomplishmentsSection';
-import StrengthListSection from './Sections/StrengthSection';
+import StrengthListSection from './Sections/StrengthListSection';
 import WorkExperienceSection from './Sections/WorkExperienceSection';
 import TechExpertiseSection from './Sections/TechExpertiseSection';
 import EducationCertificationsSection from './Sections/EducationCertificationsSection';
 
-function App() {
+function ResumePage() {
 
     const [body, setBody] = useState({ certificationsList: [] });
 
@@ -57,4 +57,4 @@ function App() {
 }
 
 
-export default App;
+export default ResumePage;

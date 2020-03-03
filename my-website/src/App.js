@@ -17,7 +17,7 @@ class App extends Component {
                     <div id="page-body">
                         <Switch>
                             <Redirect exact from="/" to="/resume" />
-                            <Route path="/resume" component={ResumePage} />
+                            <Route path="/resume" component={ResumePage}  />
                             <Route component={NotFoundPage} />
                         </Switch>
                     </div>
